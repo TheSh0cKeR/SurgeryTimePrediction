@@ -68,33 +68,49 @@ A PyTorch-based deep learning model for predicting the total duration of ENT sur
 
 ## 🗃️ Directory Structure
 
-.
-├── data/ # Input CSV dataset
-│ └── Cleaned_Dataset_14minPlus.csv
-├── outputs/ # Model checkpoints and metadata
-│ ├── best_surgery_model_v4.pt
-│ └── best_model_info_v4.txt
+```
+surgery-time-predictor/
+├── data/                      # Input CSV dataset
+│   └── Surgery Dataset.csv
+├── outputs/                   # Model checkpoints and metadata
+│   ├── best_surgery_model_v4.pt
+│   └── best_model_info_v4.txt
 ├── src/
-│ └── model.py # Main training pipeline
+│   └── Model.py               # Main training pipeline
 ├── requirements.txt
 └── README.md
-
+```
 
 ---
 
 ## ▶️ Run the Model
 
-1. Install Python packages:
+1. **Install Python packages**:
 
-    `pip install -r requirements.txt`
+```bash
+pip install -r requirements.txt
+```
 
-2. Place the dataset in data/:
+2. **Place the dataset** in the correct path:
 
-    `data/SurgeryDataset.csv`
+```bash
+data/SurgeryDataset.csv
+```
 
-3. Run the model training script:
+3. **Run the training script**:
 
-    `python src/Model.py`
+```bash
+python src/Model.py
+```
 
-Artifacts will be saved in the outputs/ folder.
+Model artifacts (trained model + metadata) will be saved to the `outputs/` folder.
+
+---
+
+## 📚 References
+
+- Riahi, V., et al. (2023). *Improving Preoperative Prediction of Surgery Duration*. BMC Health Services Research.
+- Caserta, M., & García Romero, A. (2024). *A Novel Approach to Forecast Surgery Durations*. Springer.
+
+---
 
