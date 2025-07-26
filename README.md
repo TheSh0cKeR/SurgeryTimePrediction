@@ -52,9 +52,12 @@ A PyTorch-based deep learning model for predicting the total duration of ENT sur
 
 ## 🧪 Evaluation Strategy
 
-- Stratified 85/15 train-test split using quartiles of surgery time
-- 5-fold CV with early stopping (patience = 15)
-- Final evaluation on 15% held-out test set
+Stratified 85/15 split of the full dataset into training and test sets (based on surgery time quartiles)  
+The 85% training portion is further used for:
+- 5-fold cross-validation during Optuna hyperparameter tuning  
+- Final model training on all 85% with early stopping, using a random 15% sample from it as validation  
+Final performance is evaluated on the separate 15% hold-out test set
+
 
 ### 📊 Final Results (Test Set)
 
