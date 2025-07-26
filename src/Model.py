@@ -17,7 +17,7 @@ from sklearn.feature_selection import VarianceThreshold
 from sklearn.preprocessing import StandardScaler
 
 # ╭────────────────────────── CONFIG ───────────────────────────╮
-DATA_PATH   = "Cleaned_Dataset_14minPlus.csv"
+DATA_PATH = "../data/SurgeryDataset.csv"
 TARGET      = "Total Surgery Time"
 LOG_TARGET  = False
 
@@ -320,9 +320,9 @@ torch.save(
         "log_target":  LOG_TARGET,
         "params":      best
     },
-    "best_surgery_model_v4.pt"
+    "../outputs/best_surgery_model_v4.pt"
 )
-with open("best_model_info_v4.txt", "w") as f:
+with open("../outputs/best_model_info_v4.txt", "w") as f:
     json.dump({"MAE": float(test_metrics["MAE"]), "best_params": best}, f, indent=2)
 
 print("\n✅ Model, scaler & metadata saved.")
