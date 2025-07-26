@@ -90,11 +90,11 @@ A PyTorch-based deep learning model for predicting the total duration of ENT sur
 
 2. Place the dataset in data/:
 
-    `data/Cleaned_Dataset_14minPlus.csv`
+    `data/SurgeryDataset.csv`
 
 3. Run the model training script:
 
-    `python src/model.py`
+    `python src/Model.py`
 
 Artifacts will be saved in the outputs/ folder.
 
